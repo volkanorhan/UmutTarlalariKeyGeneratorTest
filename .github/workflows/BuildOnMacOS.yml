@@ -44,7 +44,6 @@ jobs:
       - name: Deploy
         run: |
             macdeployqt ./build/UmutTarlalariKeyGenerator.app
-            mv ./build/UmutTarlalariKeyGenerator.app "./build/Umut Tarlaları Şifre Oluşturucu.app"
             create-dmg \
               --volname "Umut Tarlaları Şifre Oluşturucu" \
               --volicon "Installers/DMG/Umut Tarlalari Disk Icon.icns" \
@@ -52,11 +51,11 @@ jobs:
               --window-pos 200 120 \
               --window-size 600 420 \
               --icon-size 128 \
-              --icon "Umut\ Tarlaları\ Şifre\ Oluşturucu.app" 148 185 \
-              --hide-extension "Umut Tarlaları Şifre Oluşturucu.app" \
+              --icon "UmutTarlalariKeyGenerator.app" 148 185 \
+              --hide-extension "UmutTarlalariKeyGenerator.app" \
               --app-drop-link 455 184 \
               "UmutTarlalariKeyGen.dmg" \
-              ./build/Umut\ Tarlaları\ Şifre\ Oluşturucu.app
+              ./build/UmutTarlalariKeyGenerator.app
 
       - name: Release
         uses: softprops/action-gh-release@v1
